@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:WeatherApp"
+	xmlns:controls="clr-namespace:WeatherApp.Controls"
+	x:Class="WeatherApp.Views.DashboardView"
+	BackgroundImage = "{Binding BackgroundImage}">
+	<Grid HorizontalOptions = "FillAndExpand"
+		VerticalOptions = "FillAndExpand">
+		<Grid.RowDefinitions>
+			<RowDefinition Height = "Auto" />
+			<RowDefinition Height = "Auto" />
+			<RowDefinition Height = "Auto" />
+			<RowDefinition Height = "Auto" />
+			<RowDefinition Height = "Auto" />
+		</Grid.RowDefinitions>
+		<StackLayout Grid.Row = "0" HorizontalOptions = "FillAndExpand"
+			VerticalOptions = "Start"
+
+			BackgroundColor = "{StaticResource WeatherDarkTransparent}" >
+
+			<Grid Padding = "10" HorizontalOptions = "FillAndExpand"
+				VerticalOptions = "FillAndExpand">
+				<Grid.RowDefinitions>
+					<RowDefinition Height = "Auto" />
+					<RowDefinition Height = "Auto" />
+					<RowDefinition Height = "Auto" />
+					<RowDefinition Height = "Auto" />
+					<RowDefinition Height = "Auto" />
+				</Grid.RowDefinitions >
+				<Grid.ColumnDefinitions>
+				 	<ColumnDefinition Width = "*" />
+					<ColumnDefinition Width = "*" />
+				</Grid.ColumnDefinitions>
+				<StackLayout Grid.Row = "0" Grid.ColumnSpan = "2" HorizontalOptions = "Start">
+					<controls:WeatherLabel  TextColor = "{StaticResource WeatherWhite}"  Style = "{StaticResource DateStyle}" Text = "{Binding FormattedTime}" />
+				</StackLayout >
+				<StackLayout Grid.Row = "1" Grid.Column = "0" HorizontalOptions = "CenterAndExpand" VerticalOptions = "CenterAndExpand">
+					<controls:WeatherLabel  TextColor = "{StaticResource WeatherWhite}"  Style = "{StaticResource MainTemp}" Text = "{Binding Temperature}" />
+				</StackLayout>
+				<StackLayout Grid.Row = "1" Grid.Column = "1" HorizontalOptions = "CenterAndExpand">
+					<Image   HeightRequest = "80" HorizontalOptions = "CenterAndExpand" Source = "{Binding IconImage}" />
+				</StackLayout>
+				<StackLayout Grid.Row = "2" Orientation = "Horizontal" Grid.Column = "0" HorizontalOptions = "CenterAndExpand" >
+					<controls:WeatherLabel Margin = "0,0,5,0"  TextColor = "{StaticResource WeatherWhite}" Style = "{StaticResource DateStyle}" Text = "Max" />
+					<controls:WeatherLabel  TextColor = "{StaticResource WeatherWhite}" Style = "{StaticResource DateStyle}" Text = "{Binding MaxTemp}" />
+				</StackLayout>
+				<StackLayout Grid.Row = "2" Grid.Column = "1" HorizontalOptions = "CenterAndExpand">
+					<controls:WeatherLabel  TextColor = "{StaticResource WeatherWhite}" LineBreakMode ="TailTruncation" Style = "{StaticResource DateStyle}" Text = "{Binding CurrentLocation}" />
+				</StackLayout >
+				<StackLayout Orientation = "Horizontal" Grid.Row = "3" Grid.Column = "0" HorizontalOptions = "CenterAndExpand">
+					<controls:WeatherLabel Margin = "0,0,5,0" TextColor = "{StaticResource WeatherWhite}" Style = "{StaticResource DateStyle}" Text = "Min" />
+					<controls:WeatherLabel  TextColor = "{StaticResource WeatherWhite}" Style = "{StaticResource DateStyle}" Text = "{Binding MinTemp}" />
+				</StackLayout>
+
+			</Grid>
+			
+		</StackLayout>
+
+	</Grid>
+
+</ContentPage>

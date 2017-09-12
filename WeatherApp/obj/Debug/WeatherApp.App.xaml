@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:controls="clr-namespace:WeatherApp.Controls" x:Class="WeatherApp.App">
+	<Application.Resources>
+		<ResourceDictionary>
+
+	        <Color x:Key="WeatherTransparent">#65000000</Color>
+	        <Color x:Key="WeatherDarkTransparent">#80000000</Color>
+			<Color x:Key="WeatherWhite">#FFFFFF</Color>
+	        <x:Double x:Key="WeatherExtraSmall">14</x:Double>
+	        <x:Double x:Key="WeatherRegular">18</x:Double>
+			<x:Double x:Key="WeatherLarge">100</x:Double>
+	        <Style x:Key="WeatherTextBox" TargetType="controls:WeatherLabel">
+	            <Setter Property="FontFamily" Value="WeatherThin" />
+	        </Style>
+	        <Style TargetType="Label">
+	            <Setter Property="FontFamily" Value="WeatherThin" />
+	            <Setter Property="FontSize" Value="{StaticResource WeatherRegular}" />
+	            <Setter Property="TextColor" Value="{StaticResource WeatherWhite}" />
+	        </Style>
+			<Style x:Key="DateStyle" TargetType="controls:WeatherLabel">
+                <Setter Property="FontFamily" Value="WeatherThin" />
+                <Setter Property="FontSize" Value="{StaticResource WeatherRegular}" />
+            </Style>
+			<Style x:Key="MainTemp" TargetType="controls:WeatherLabel">
+                <Setter Property="FontFamily" Value="WeatherThin" />
+                <Setter Property="FontSize" Value="{StaticResource WeatherLarge}" />
+            </Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

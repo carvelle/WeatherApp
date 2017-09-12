@@ -1,0 +1,15 @@
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/obj/Release/.NETPortable,Version=v4.5,Profile=Profile111.AssemblyAttribute.cs
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/obj/Release/WeatherApp.App.xaml
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/obj/Release/WeatherApp.WeatherAppPage.xaml
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/obj/Release/WeatherApp.Views.DashboardView.xaml
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/obj/Release/WeatherApp.App.xaml.g.cs
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/obj/Release/WeatherApp.WeatherAppPage.xaml.g.cs
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/obj/Release/WeatherApp.Views.DashboardView.xaml.g.cs
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/bin/Release/WeatherApp.dll
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/obj/Release/WeatherApp.dll
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/bin/Release/Xamarin.Forms.Core.dll
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/bin/Release/Xamarin.Forms.Platform.dll
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/bin/Release/Xamarin.Forms.Xaml.dll
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/bin/Release/Newtonsoft.Json.dll
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/bin/Release/Plugin.Geolocator.Abstractions.dll
+/Users/sibusiso/Projects/WeatherApp/WeatherApp/bin/Release/Plugin.Geolocator.dll

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{30BCEAB6-59BD-4B86-B3C9-ECE9A0C42FC9}</ProjectGuid>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WeatherApp</RootNamespace>
+    <AssemblyName>WeatherApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile111</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App.xaml" />
+    <EmbeddedResource Include="Views\DashboardView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="Controls\WeatherLabel.cs" />
+    <Compile Include="Network\BaseConnectivityManager.cs" />
+    <Compile Include="Models\IBaseResponseModel.cs" />
+    <Compile Include="Interfaces\IHttpClientDataProvider.cs" />
+    <Compile Include="Network\HttpClientWrapper.cs" />
+    <Compile Include="Helpers\SerialiazerHelper.cs" />
+    <Compile Include="Enums\ContentTypes.cs" />
+    <Compile Include="Urls\Urls.cs" />
+    <Compile Include="Providers\DataProvider.cs" />
+    <Compile Include="Interfaces\IDataProvider.cs" />
+    <Compile Include="Models\CurrentWeatherModel.cs" />
+    <Compile Include="Models\ExtendedForecastModel.cs" />
+    <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Interfaces\IBaseView.cs" />
+    <Compile Include="Models\CoordinatesModel.cs" />
+    <Compile Include="Models\WeatherModel.cs" />
+    <Compile Include="Models\TemperaturePressureModel.cs" />
+    <Compile Include="Models\WindModel.cs" />
+    <Compile Include="Models\CloudsModel.cs" />
+    <Compile Include="Models\SystemModel.cs" />
+    <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="Helpers\Notifiable.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="Utilities\DateTimeUtil.cs" />
+    <Compile Include="Utilities\GetIconImageUtil.cs" />
+    <Compile Include="Helpers\BackgroundChanger.cs" />
+    <Compile Include="Helpers\LocationHelper.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Constants\Constants.cs" />
+    <Compile Include="Helpers\Cronjob.cs" />
+    <Compile Include="Converters\AppendDegreeCharacter.cs" />
+    <Compile Include="Helpers\PermissionsHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.4.0.1\lib\netstandard1.0\Plugin.Geolocator.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Geolocator">
+      <HintPath>..\packages\Xam.Plugin.Geolocator.4.0.1\lib\netstandard1.0\Plugin.Geolocator.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.4.270\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions.Abstractions">
+      <HintPath>..\packages\Plugin.Permissions.2.0.1\lib\netstandard1.0\Plugin.Permissions.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\packages\Plugin.Permissions.2.0.1\lib\netstandard1.0\Plugin.Permissions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Network\" />
+    <Folder Include="Models\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Urls\" />
+    <Folder Include="Providers\" />
+    <Folder Include="Converters\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.4.270\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
+</Project>
