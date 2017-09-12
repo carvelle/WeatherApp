@@ -1,23 +1,19 @@
 ﻿<Properties StartupConfiguration="{C616F387-1744-4202-9FED-F17657071AB3}|Default">
   <MonoDevelop.Ide.ItemProperties.WeatherApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.45709C45-586D-4207-B2DA-2F4C8B66CA67" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherApp/ViewModels/DashboardViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WeatherApp/Network/BaseConnectivityManager.cs">
     <Files>
       <File FileName="WeatherApp/ViewModels/DashboardViewModel.cs" Line="132" Column="1" />
       <File FileName="WeatherApp/Views/DashboardView.xaml.cs" Line="1" Column="1" />
       <File FileName="WeatherApp/Providers/DataProvider.cs" Line="7" Column="26" />
       <File FileName="WeatherApp/Helpers/LocationHelper.cs" Line="17" Column="72" />
-      <File FileName="WeatherApp/Network/BaseConnectivityManager.cs" Line="49" Column="1" />
+      <File FileName="WeatherApp/Network/BaseConnectivityManager.cs" Line="32" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/sibusiso/Projects/WeatherApp/WeatherApp/ViewModels/DashboardViewModel.cs" relfile="WeatherApp/ViewModels/DashboardViewModel.cs" line="132" column="1" />
-      <Breakpoint file="/Users/sibusiso/Projects/WeatherApp/WeatherApp/Network/BaseConnectivityManager.cs" relfile="WeatherApp/Network/BaseConnectivityManager.cs" line="32" column="1" />
-      <Breakpoint file="/Users/sibusiso/Projects/WeatherApp/WeatherApp/Network/BaseConnectivityManager.cs" relfile="WeatherApp/Network/BaseConnectivityManager.cs" line="49" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.WeatherApp.Droid PreferredExecutionTarget="Android.Nexus S (KitKat)" />
+  <MonoDevelop.Ide.ItemProperties.WeatherApp.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
 </Properties>
